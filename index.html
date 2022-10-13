@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/327102260c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cotaçao de Milhas</title>
+</head>
+<body>
+    <main>
+        <h1>Realize a sua Cotacao</h1>
+        <div class="container">
+            
+            <div class="buy">
+                <h2>Compras de Milhas</h2>
+
+                <div class="row-container">
+                    
+                    <div class="row-input">
+                        <i class="fa-solid fa-brazilian-real-sign"></i>
+                        <input id="vlr_simul" type="number" placeholder=" Informe o Valor da Simulação">
+                    </div>
+                    <div class="row-input">
+                        <i class="fa-solid fa-brazilian-real-sign"></i>
+                        <input id="qtd_a_venda" type="number" name="" placeholder=" Informe a Quantidade De milhas">
+                    </div>
+
+                    <select onchange="choiceOption()" name="program" id="opttions">
+                        <option value="0">Escolha uma Opcao</option>
+                        <option value="1">Vender Pela Smiles</option>
+                        <option value="2">Vender Tudo Azul</option>
+                        <option value="3">Vender Pela Latam Pass</option>
+                        <option value="4">Vender Pela Latam Pass Platinum/Black</option>
+                    </select>
+
+                </div>
+
+                <span id="warningbuy"></span>
+
+            </div>
+            <div class="sell">
+                <h2>Compra</h2>
+                <div class="row-container">
+                    <input id="vlr_compra" type="number" placeholder=" Informe o Valor Total Pago">
+                    <input id="qtd_milha_compra" type="number" name="" placeholder=" Informe a Quantidade De milhas">
+                    <input type="button" value="Cotar">
+                </div>
+
+                <span id="warningsell"></span>
+
+            </div>
+            <!-- <div class="options">
+                <button onclick="showBuy()">Comprar</button>
+                <button onclick="showSell()">Vender</button>
+            </div> -->
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
