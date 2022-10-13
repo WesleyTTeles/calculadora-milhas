@@ -91,6 +91,10 @@ input[type=button]{
     color: #10403B;
     padding-left: 5px;
 }
+.row-input {
+    display: flex;
+    align-items: center;
+}
 .options button{
     width: 100px;
     height: 24px;
@@ -110,4 +114,8 @@ input[type=button]{
 }
 .fa-solid {
     color: #10403B;
+}
+
+@media (max-width: 464px){
+
 }
