@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #8AA6A3;
+    background-color: #FF7020;
 }
 main {
     width: 100vw;
@@ -34,7 +34,84 @@ main h1 {
     align-items: center;
     width: 90%;
     height: 400px;
-    border: 1px solid #127369;
+    border: 2px solid #fff;
+}
+.sell h2,
+.buy h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+.sell span,
+.buy span {
+    text-align: center;
+    color: #fff;
+}
+.row-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+}
+.row-input{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.row-input i{
+    position: absolute;
+    margin-left: 5px;
+    color: #10403B;
+    background-color: #fff;
+}
+.row-container input{
+    font-size: 0.9rem;
+    width: 100%;
+    margin: 5px 0;
+    height: 30px;
+    padding-left: 25px;
+    border: none;
+    background-color: #FFF1EB;
+    border-radius: 10px;
+    outline: none;
+}
+::placeholder{
+    color: #10403B;
+}
+#button{
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #fff;
+    width: 100%;
+    color: #000000;
+    padding: 0;
+}
+
+/* input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+} */
+#opttions {
+    font-size: 0.9rem;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #10403B;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.buttons-type button{
+    font-size: 1rem;
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: #fff;
+    color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .sell {
     display: none;
@@ -45,77 +122,6 @@ main h1 {
     height: 400px;
     border: 1px solid #127369;
 }
-.sell h2,
-.buy h2 {
-    margin-bottom: 20px;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-}
-.row-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 80%;
-    height: auto;
-}
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-}
-input[type=button]{
-    cursor: pointer;
-    background-color: #10403B;
-}
-.row-container input{
-    width: 94%;
-    margin: 5px 0;
-    height: 30px;
-    border: none;
-    background-color: #BFBFBF;
-    border-radius: 10px;
-    outline: none;
-}
-.sell span,
-.buy span {
-    text-align: center;
-    color: #fff;
-}
-.options{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 230px;
-}
-::placeholder{
-    color: #10403B;
-    padding-left: 5px;
-}
-.row-input {
-    display: flex;
-    align-items: center;
-}
-.options button{
-    width: 100px;
-    height: 24px;
-    border: none;
-    background-color: #10403B;
-    color: #BFBFBF;
-    border-radius: 10px;
-    cursor: pointer;
-}
-#opttions {
-    height: 30px;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #10403B;
-    color: #fff;
-    margin-bottom: 20px;
-}
-.fa-solid {
-    color: #10403B;
-}
-
 @media (max-width: 464px){
-
+    
 }

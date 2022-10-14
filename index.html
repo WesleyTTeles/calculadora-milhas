@@ -18,18 +18,15 @@
             
             <div class="buy">
                 <h2>Compras de Milhas</h2>
-
                 <div class="row-container">
-                    
                     <div class="row-input">
                         <i class="fa-solid fa-brazilian-real-sign"></i>
-                        <input id="vlr_simul" type="number" placeholder=" Informe o Valor da Simulação">
+                        <input id="vlr_simul" type="text" maxlength="10" placeholder="Informe o Valor Total Pago">
                     </div>
                     <div class="row-input">
                         <i class="fa-solid fa-brazilian-real-sign"></i>
-                        <input id="qtd_a_venda" type="number" name="" placeholder=" Informe a Quantidade De milhas">
+                        <input id="qtd_a_venda" type="text" maxlength="10" placeholder="Informe a Quantidade De milhas">
                     </div>
-
                     <select onchange="choiceOption()" name="program" id="opttions">
                         <option value="0">Escolha uma Opção de Compra</option>
                         <option value="1">Comprar Pela Smiles</option>
@@ -37,29 +34,27 @@
                         <option value="3">Comprar Pela Latam Pass</option>
                         <option value="4">Comprar Pela Latam Pass Platinum/Black</option>
                     </select>
-
+                    <input id="button" type="button" value="Cotar" onclick="calcCotar()">
                 </div>
-
                 <span id="warningbuy"></span>
 
             </div>
             <div class="sell">
                 <h2>Compra</h2>
                 <div class="row-container">
-                    <input id="vlr_compra" type="number" placeholder=" Informe o Valor Total Pago">
-                    <input id="qtd_milha_compra" type="number" name="" placeholder=" Informe a Quantidade De milhas">
+                    <input id="vlr_compra" type="number" placeholder="Informe o Valor Total Pago">
+                    <input id="qtd_milha_compra" type="number" name="" placeholder="Informe a Quantidade De milhas">
                     <input type="button" value="Cotar">
                 </div>
-
                 <span id="warningsell"></span>
 
             </div>
-            <!-- <div class="options">
+            <div class="buttons-type">
                 <button onclick="showBuy()">Comprar</button>
                 <button onclick="showSell()">Vender</button>
-            </div> -->
+            </div>
         </div>
     </main>
-    <script src="main.js"></script>
 </body>
+<script src="main.js"></script>
 </html>
