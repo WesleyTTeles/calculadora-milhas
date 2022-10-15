@@ -89,7 +89,8 @@ main h1 {
     color: #fff;
     padding: 0;
 }
-#opttions {
+#opttions-buy,
+#opttions-sell {
     font-size: 0.9rem;
     height: 30px;
     border-radius: 10px;

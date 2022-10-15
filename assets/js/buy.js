@@ -1,5 +1,5 @@
-function choiceOption() {
-    const select = document.querySelector('#opttions');
+function choiceOptionBuy() {
+    const select = document.querySelector('#opttions-buy');
     valor = select.options[select.selectedIndex].value;
 }
 

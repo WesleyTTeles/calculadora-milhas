@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Cotaçao de Milhas</title>
 </head>
 <body>
@@ -26,7 +26,7 @@
                         <i class="fa-solid fa-brazilian-real-sign"></i>
                         <input id="qtd-to-buy" type="text" maxlength="10" placeholder="Informe a Quantidade De milhas">
                     </div>
-                    <select onchange="choiceOption()" name="program" id="opttions">
+                    <select onchange="choiceOptionBuy()" name="program" id="opttions-buy">
                         <option value="0">Escolha uma Companhia Aérea</option>
                         <option value="1">Comprar Pela Smiles</option>
                         <option value="2">Comprar Pela Tudo Azul</option>
@@ -35,8 +35,9 @@
                     </select>
                     <input id="button" type="button" value="Cotar" onclick="calcBuy()">
                 </div>
-            </div>
+            </div> 
             <div class="sell">
+               
                 <h2>Vender Milhas</h2>
                 <div class="row-container">
                     <div class="row-input">
@@ -47,7 +48,7 @@
                         <i class="fa-solid fa-brazilian-real-sign"></i>
                         <input id="qtd-to-sell" type="text" maxlength="10" placeholder="Informe a Quantidade De milhas">
                     </div>
-                    <select onchange="choiceOption()" name="program" id="opttions">
+                    <select onchange="choiceOptionSell()" name="program" id="opttions-sell">
                         <option value="0">Escolha uma Companhia Aérea</option>
                         <option value="1">Vender Pela Smiles</option>
                         <option value="2">Vender Pela Tudo Azul</option>
@@ -65,6 +66,6 @@
         </div>
     </main>
 </body>
-<script src="buy.js"></script>
-<script src="sell.js"></script>
+<script src="assets/js/buy.js"></script>
+<script src="assets/js/sell.js"></script>
 </html>

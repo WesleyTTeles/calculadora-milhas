@@ -1,6 +1,7 @@
-function choiceOption() {
-    const select = document.querySelector('#opttions');
+function choiceOptionSell() {
+    const select = document.querySelector('#opttions-sell');
     valor = select.options[select.selectedIndex].value;
+    console.log(valor)
 }
 
 // Funcao Calculo de Compra Da Smiles
