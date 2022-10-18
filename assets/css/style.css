@@ -100,6 +100,10 @@ main h1 {
     color: #fff;
     margin-bottom: 20px;
 }
+option{
+    font-size: 0.9rem;
+    color: black;
+}
 .buttons-type{
     display: flex;
     justify-content: center;
