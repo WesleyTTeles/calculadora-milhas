@@ -22,8 +22,7 @@
                 <div class="row-container">
                     <div class="row-input">
                         <i class="fa-solid fa-brazilian-real-sign"></i>
-                        <!-- <input type="text" class="form-control" onkeypress="$(this).mask('#.##0,00', {reverse: true});" placeholder="Informe o Valor Total da Compra"> -->
-
+                        <!-- <input id="texte" type="text" class="form-control" onkeypress="$(this).mask('#.##0,00', {reverse: true});" placeholder="Informe o Valor Total da Compra"> -->
                         <input id="vlr-to-pay" type="text" maxlength="10" placeholder="Informe o Valor Total da Compra">
                     </div>
                     <div class="row-input">
@@ -39,9 +38,8 @@
                     </select>
                     <input id="button" type="button" value="Cotar" onclick="calcBuy()">
                 </div>
-            </div> 
+            </div>
             <div class="sell">
-               
                 <h2>Vender Milhas</h2>
                 <div class="row-container">
                     <div class="row-input">
@@ -62,10 +60,26 @@
                     <input id="button" type="button" value="Cotar" onclick="calcSell()">
                 </div>
             </div>
+            <div class="transfer">
+                <h2>Tranferencia Bonificada</h2>
+                <div class="row-container">
+                    <div class="row-input">
+                        <i class="fa-solid fa-tag"></i>
+                        <input id="qtd-points" type="number" maxlength="10" placeholder="Informe a Quantidade de Pontos">
+                    </div>
+                    <div class="row-input">
+                        <i class="fa-solid fa-percent"></i>
+                        <input id="porcent" type="number" maxlength="10" placeholder="Informe o Percentual da Tranferencia">
+                    </div>
+
+                    <input id="button" type="button" value="Cotar" onclick="calcPoints()">
+                </div>
+            </div>
 
             <div class="buttons-type">
                 <button onclick="showBuy()">Comprar</button>
                 <button onclick="showSell()">Vender</button>
+                <button onclick="showTransfer()">Tranferencia Bonificada</button>
             </div>
         </div>
     </main>

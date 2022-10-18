@@ -132,8 +132,24 @@ function remov() {
 function showBuy(){
     document.querySelector('.sell').style.display = 'none';
     document.querySelector('.buy').style.display = 'flex';
+    document.querySelector('.transfer').style.display = 'none';
 }
 function showSell(){
     document.querySelector('.sell').style.display = 'flex';
     document.querySelector('.buy').style.display = 'none';
+    document.querySelector('.transfer').style.display = 'none';
+}
+function showTransfer(){
+    document.querySelector('.sell').style.display = 'none';
+    document.querySelector('.buy').style.display = 'none';
+    document.querySelector('.transfer').style.display = 'flex';
+}
+
+function calcPoints() {
+    let qtdPoint = document.querySelector('#qtd-points').value
+    let porcent = document.querySelector('#porcent').value;
+    let qtdPointNumb = parseInt(qtdPoint);
+    let porcentNumb = parseInt(porcent);
+    transfer = ((qtdPointNumb * porcentNumb) / 100) + qtdPointNumb;
+    alert(`Você ficará com ${transfer} pontos/milhas após essa Tranferencia.`)
 }
