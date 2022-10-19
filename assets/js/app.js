@@ -144,7 +144,7 @@ function showTransfer(){
     document.querySelector('.buy').style.display = 'none';
     document.querySelector('.transfer').style.display = 'flex';
 }
-
+/*
 function calcPoints() {
     let qtdPoint = document.querySelector('#qtd-points').value
     let porcent = document.querySelector('#porcent').value;
@@ -152,4 +152,17 @@ function calcPoints() {
     let porcentNumb = parseInt(porcent);
     transfer = ((qtdPointNumb * porcentNumb) / 100) + qtdPointNumb;
     alert(`Você ficará com ${transfer} pontos/milhas após essa Tranferencia.`)
+}
+*/
+function calcPoints() {
+    let qtdPoint = document.querySelector('#qtd-points').value
+    let porcent = document.querySelector('#porcent').value;
+    let qtdPointNumb = parseInt(qtdPoint);
+    let porcentNumb = parseInt(porcent);
+    let priceMilhasReal = 70;
+    
+    priceMilhas = priceMilhasReal - ((priceMilhasReal * porcentNumb) / 100);
+    valueInvest = (qtdPointNumb / 1000) * priceMilhas;
+    
+    alert(`Seu Valor investido é ${valueInvest.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} reais \n e o Custo do Milheiro é ${priceMilhas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} reais`)
 }
