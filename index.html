@@ -31,7 +31,6 @@
                 <div class="row-container">
                     <div class="row-input">
                         <i class="fa-solid fa-brazilian-real-sign"></i>
-                        <!-- <input id="texte" type="text" class="form-control" onkeypress="$(this).mask('#.##0,00', {reverse: true});" placeholder="Informe o Valor Total da Compra"> -->
                         <input id="vlr-to-pay" type="text" maxlength="10" placeholder="Informe o Valor Total da Compra">
                     </div>
                     <div class="row-input">
@@ -78,18 +77,22 @@
                     </div>
                     <div class="row-input">
                         <i class="fa-solid fa-percent"></i>
-                        <input id="porcent" type="number" maxlength="10" placeholder="Informe o Percentual da Tranferencia">
+                        <input id="porcent" type="number" maxlength="10" placeholder="Informe o Valor do Cupom">
+                        <span>Se nao tiver cupom use 0 para seguir</span>
+                    </div>
+                    <div class="row-transfer">
+                        <i class="fa-solid fa-percent"></i>
+                        <input id="porcent-transfer" type="number" maxlength="10" placeholder="Informe qual Valor da Tranferencia">
                     </div>
 
                     <input id="button" type="button" value="Cotar" onclick="calcPoints()">
+
+                    <div class="row-check">
+                        <span>Quero calcular com Tranferencia Bonificada</span>
+                        <input id="check" type="checkbox">
+                    </div>
                 </div>
             </div>
-
-            <!-- <div class="buttons-type">
-                <button onclick="showBuy()">Comprar</button>
-                <button onclick="showSell()">Vender</button>
-                <button onclick="showTransfer()">Tranferencia Bonificada</button>
-            </div> -->
         </div>
     </main>
 </body>
