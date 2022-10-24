@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,92 +7,95 @@
     <script src="https://kit.fontawesome.com/327102260c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Cotaçao de Milhas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Cotacao Milhas</title>
 </head>
 <body>
     <main>
-        <div class="menu-container">
+        <div class="container">
+            <div class="col-container-1">
+
+                <h1>Realize sua Cotacao</h1>
+                <h2>Compra de Milhas</h2>
+
+                <div class="row-info-box">
+                    <div class="row-value-invest">
+                        <h3 id="vl-invest">R$ 00,00</h3>
+                        <span>Valor Investido</span>
+                    </div>
+                    <div class="row-value-milheiro">
+                        <span>Valor do Milheiro</span>
+                        <span id="vl-milheiro">R$ 00,00</span>
+                    </div>
+                    <div class="row-qtd-points">
+                        <span>Pts Pós Transferência</span>
+                        <span id="ttl-point" >Pt 0</span>
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <span id="warning" ></span>
+                </div>
+            </div>
+
+            <div class="col-container-2">
+                <div class="row-info-inputs">
+
+                    <div class="input-group">
+                        <div class="info-input">
+                            <span>Qtd de Pontos/Milhas</span>
+                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite a Quantidade de pontos ou milhas podendo ser pontos acumulado ou compra de pontos para Tranferencia ou apenas compra de milhas."></i>
+                        </div>
+                        <input id="qtd-point" type="text" placeholder="Digite Aqui">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="info-input">
+                            <span>Valor do Cupom ( % )</span>
+                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite somente o número da Porcentagem de desconto que voce recebeu para comprar dos pontos ou milhas."></i>
+                        </div>
+                        <input id="vl-cupon" type="text" placeholder="Digite Aqui">
+                    </div>
+
+                    <div class="row-transfer input-group">
+                        <div class="info-input">
+                            <span>Valor da Transferencia ( % )</span>
+                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite somente o número da Porcentagem da Tranferencia."></i>
+                        </div>
+                        <input id="vl-transfer" type="text" placeholder="Digite Aqui">
+                    </div>
+
+                    <div class="row-select">
+                        <select onchange="choiceOptionBuy()" name="program" id="opttions-buy">
+                            <option value="0">Escolha uma Companhia Aérea</option>
+                            <option value="1">Smiles</option>
+                            <option value="2">Tudo Azul</option>
+                            <option value="3">Latam Pass</option>
+                            <option value="4">Latam Pass Platinum/Black</option>
+                        </select>
+                    </div>
+
+                    <div class="row-checkbox">
+                        <input type="checkbox" name="check" id="check">
+                        <span>Realizar Cotação com Tranferencia Bonificada</span>
+                    </div>
+
+                    <div class="row-btn">
+                        <button onclick="calcPoints()">Cotar</button>
+                    </div>
+                </div>
+
+            </div>
+
             <nav>
-                <ul>  
-                    <li onclick="showBuy()"><i class="fa-solid fa-bag-shopping fa-xl"></i></li>
-                    <li onclick="showSell()"><i class="fa-solid fa-dollar-sign fa-xl"></i></li>
-                    <li onclick="showTransfer()"><i class="fa-solid fa-right-left fa-xl"></i></li>
+                <ul>
+                    <li><i class="fa-solid fa-bag-shopping fa-lg"></i></li>
+                    <li><i class="fa-solid fa-dollar-sign fa-lg"></i></li>
+                    <li><i class="fa-solid fa-right-left fa-lg"></i></li>
                 </ul>
             </nav>
-        </div>
-        <h1>Realize a sua Cotacao</h1>
-        <div class="container">
-            <div class="buy">
-                <h2>Compras de Milhas</h2>
-                <div class="row-container">
-                    <div class="row-input">
-                        <i class="fa-solid fa-brazilian-real-sign"></i>
-                        <input id="vlr-to-pay" type="text" maxlength="10" placeholder="Informe o Valor Total da Compra">
-                    </div>
-                    <div class="row-input">
-                        <i class="fa-solid fa-tag"></i>
-                        <input id="qtd-to-buy" type="number" maxlength="10" placeholder="Informe a Quantidade De milhas">
-                    </div>
-                    <select onchange="choiceOptionBuy()" name="program" id="opttions-buy">
-                        <option value="0">Escolha uma Companhia Aérea</option>
-                        <option value="1">Comprar Pela Smiles</option>
-                        <option value="2">Comprar Pela Tudo Azul</option>
-                        <option value="3">Comprar Pela Latam Pass</option>
-                        <option value="4">Comprar Pela Latam Pass Platinum/Black</option>
-                    </select>
-                    <input id="button" type="button" value="Cotar" onclick="calcBuy()">
-                </div>
-            </div>
-            <div class="sell">
-                <h2>Vender Milhas</h2>
-                <div class="row-container">
-                    <div class="row-input">
-                        <i class="fa-solid fa-brazilian-real-sign"></i>
-                        <input id="vlr-simulations" type="text" maxlength="10" placeholder="Informe o Valor da Simulação">
-                    </div>
-                    <div class="row-input">
-                        <i class="fa-solid fa-tag"></i>
-                        <input id="qtd-to-sell" type="text" maxlength="10" placeholder="Informe a Quantidade De milhas">
-                    </div>
-                    <select onchange="choiceOptionSell()" name="program" id="opttions-sell">
-                        <option value="0">Escolha uma Companhia Aérea</option>
-                        <option value="1">Vender Pela Smiles</option>
-                        <option value="2">Vender Pela Tudo Azul</option>
-                        <option value="3">Vender Pela Latam Pass</option>
-                        <option value="4">Vender Pela Latam Pass Platinum/Black</option>
-                    </select>
-                    <input id="button" type="button" value="Cotar" onclick="calcSell()">
-                </div>
-            </div>
-            <div class="transfer">
-                <h2>Comprar de Pontos</h2>
-                <div class="row-container">
-                    <div class="row-input">
-                        <i class="fa-solid fa-tag"></i>
-                        <input id="qtd-points" type="number" maxlength="10" placeholder="Informe a Quantidade de Pontos">
-                    </div>
-                    <div class="row-input">
-                        <i class="fa-solid fa-percent"></i>
-                        <input id="porcent" type="number" maxlength="10" placeholder="Informe o Valor do Cupom">
-                        <span>Se nao tiver cupom use 0 para seguir</span>
-                    </div>
-                    <div class="row-transfer">
-                        <i class="fa-solid fa-percent"></i>
-                        <input id="porcent-transfer" type="number" maxlength="10" placeholder="Informe qual Valor da Tranferencia">
-                    </div>
 
-                    <input id="button" type="button" value="Cotar" onclick="calcPoints()">
-
-                    <div class="row-check">
-                        <span>Quero calcular com Tranferencia Bonificada</span>
-                        <input id="check" type="checkbox">
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
 </body>
