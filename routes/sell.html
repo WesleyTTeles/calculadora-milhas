@@ -16,19 +16,11 @@
         <div class="container">
             <div class="col-container-1">
                 <h1>Realize sua Cotacao</h1>
-                <h2>Compra de Pontos ou Milhas</h2>
+                <h2>Venda de Milhas</h2>
                 <div class="row-info-box">
                     <div class="row-value-invest">
-                        <h3 id="vl-invest">R$ 00,00</h3>
-                        <span>Valor Investido</span>
-                    </div>
-                    <div class="row-value-milheiro">
+                        <h3 id="vl-milheiro">R$ 00,00</h3>
                         <span>Valor do Milheiro</span>
-                        <span id="vl-milheiro">R$ 00,00</span>
-                    </div>
-                    <div class="row-qtd-points">
-                        <span>Pts Pós Transferência</span>
-                        <span id="ttl-point">Pt 0</span>
                     </div>
                 </div>
                 <div class="warning">
@@ -37,40 +29,26 @@
             </div>
             <div class="col-container-2">
                 <div class="row-info-inputs">
-
                     <div class="input-group">
                         <div class="info-input">
-                            <span>Qtd de Pontos/Milhas</span>
-                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite a Quantidade de pontos ou milhas podendo ser pontos acumulado ou compra de pontos para Tranferencia ou apenas compra de milhas."></i>
+                            <span>Quantidade de Milhas</span>
+                            <i class="fa-solid fa-circle-info fa-2xs" title="Informe a quantidade de milhas que deseja vender"></i>
                         </div>
-                        <input id="qtd-point" type="text" placeholder="Digite Aqui">
+                        <input id="qtd-milhas" type="text" placeholder="Digite Aqui">
                     </div>
                     <div class="input-group">
                         <div class="info-input">
-                            <span>Valor do Cupom ( % )</span>
-                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite somente o número da Porcentagem de desconto que voce recebeu para comprar dos pontos ou milhas."></i>
+                            <span>Valor da Simulação</span>
+                            <i class="fa-solid fa-circle-info fa-2xs" title="Informe o valor da Simulação recebida."></i>
                         </div>
-                        <input id="vl-cupon" type="text" maxlength="3" placeholder="Digite Aqui">
+                        <input id="vl-simulation" type="text" placeholder="Digite Aqui">
                     </div>
                     <div class="row-transfer input-group">
                         <div class="info-input">
                             <span>Valor da Transferencia ( % )</span>
                             <i class="fa-solid fa-circle-info fa-2xs" title="Digite somente o número da Porcentagem da Tranferencia."></i>
                         </div>
-                        <input id="vl-transfer" type="text" maxlength="3" placeholder="Digite Aqui">
-                    </div>
-                    <!-- <div class="row-select">
-                        <select onchange="choiceOptionBuy()" name="program" id="opttions-buy">
-                            <option value="0">Escolha uma Companhia Aérea</option>
-                            <option value="1">Smiles</option>
-                            <option value="2">Tudo Azul</option>
-                            <option value="3">Latam Pass</option>
-                            <option value="4">Latam Pass Platinum/Black</option>
-                        </select>
-                    </div> -->
-                    <div class="row-checkbox">
-                        <input type="checkbox" name="check" id="check">
-                        <span>Realizar Cotação com Tranferencia Bonificada</span>
+                        <input id="vl-transfer" type="text" placeholder="Digite Aqui">
                     </div>
                     <div class="row-btn">
                         <button id="btn-cotar">Cotar</button>
@@ -80,15 +58,15 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="/index.html">
                             <i class="fa-solid fa-bag-shopping fa-lg"></i>
                         </a>
                     <li>
-                        <a href="routes/sell.html">
+                        <a href="/routes/sell.html">
                             <i class="fa-solid fa-dollar-sign fa-lg"></i>
                         </a>
                     <li>
-                        <a href="routes/transfer.html">
+                        <a href="/routes/transfer.html">
                             <i class="fa-solid fa-right-left fa-lg"></i>
                         </a>
                     </li>
@@ -98,5 +76,5 @@
         </div>
     </main>
 </body>
-<script src="assets/js/app.js"></script>
+<script src="/assets/js/sell.js"></script>
 </html>

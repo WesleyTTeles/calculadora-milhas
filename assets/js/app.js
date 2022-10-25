@@ -1,5 +1,5 @@
 // Funcao pra checar se os campos estao vazios
-function checkBuyPoint(){
+function checkField(){
     let qtdPoints = document.querySelector('#qtd-point').value;
     let porcentPoint = document.querySelector('#vl-cupon').value;
     let msg1 = '';
@@ -26,13 +26,7 @@ checkbox.addEventListener('change', ()=> {
     document.querySelector('#vl-transfer').value = '';
 })
 
-// funcao para monitorar as mudancas do select e armazenar em uma variavel
-function choiceOptionBuy() {
-    const select = document.querySelector('#opttions-buy');
-    valor = select.options[select.selectedIndex].value;
-}
-
-function calcPoints() {
+function priceBuy() {
     let qtdPoint = document.querySelector('#qtd-point').value;
     let vlCupom = document.querySelector('#vl-cupon').value;
     let vlTransfer = document.querySelector('#vl-transfer').value;
@@ -42,49 +36,34 @@ function calcPoints() {
     
     priceMilhasReal = 70 - ((70 * vlCupomNumb) / 100);
     valueInvest = (qtdPointNumb / 1000) * priceMilhasReal;
-
+    
     resultTransfer = ((qtdPointNumb * vlTransferNumb) / 100) + qtdPointNumb;
     priceMilheiroOff = valueInvest / (resultTransfer / 1000);
     
-    if(checkBuyPoint() == false){
-
+    if(checkField() == false){
     } else {
-        if(vlTransfer == ''){
+        if(vlTransfer == '') {
             document.querySelector('#vl-invest').innerHTML = valueInvest.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             document.querySelector('#vl-milheiro').innerHTML = priceMilhasReal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-            if (valor == 1){
-                if (priceMilhasReal <= 17.50) {
-                    document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
-                    document.querySelector('#warning').style.color = '#21EC1D';
-                } else {
-                    document.querySelector('#warning').innerHTML = 'Cotação boa Somente pra Viagem'  
-                    document.querySelector('#warning').style.color = '#ffff00';
-                }
-            } else if (valor == 2) {
-                if (priceMilhasReal <= 20) {
-                    document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
-                    document.querySelector('#warning').style.color = '#21EC1D';
-                } else {
-                    document.querySelector('#warning').innerHTML = 'Cotação boa Somente pra Viagem'  
-                    document.querySelector('#warning').style.color = '#ffff00';
-                }
-            } else if (valor == 3 || valor == 4) {
-                if (priceMilhasReal <= 24) {
-                    document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
-                    document.querySelector('#warning').style.color = '#21EC1D';
-                } else {
-                    document.querySelector('#warning').innerHTML = 'Cotação boa Somente pra Viagem'  
-                    document.querySelector('#warning').style.color = '#ffff00';
-                }
-            } else {
-                alert('Preecnha os Campos!')
-            }
-
         } else {
             document.querySelector('#vl-invest').innerHTML = valueInvest.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             document.querySelector('#vl-milheiro').innerHTML = priceMilheiroOff.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             document.querySelector('#ttl-point').innerHTML = resultTransfer;   
-            if (valor == 1){
+        } 
+    }       
+}
+let btnCotar = document.querySelector('#btn-cotar');
+btnCotar.addEventListener('click', priceBuy);
+
+/*
+
+// funcao para monitorar as mudancas do select e armazenar em uma variavel
+function choiceOptionBuy() {
+    const select = document.querySelector('#opttions-buy');
+    valor = select.options[select.selectedIndex].value;
+}
+
+if (valor == 1){
                 if (priceMilheiroOff <= 17.50) {
                     document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
                     document.querySelector('#warning').style.color = '#21EC1D';
@@ -111,6 +90,5 @@ function calcPoints() {
             } else {
                 alert('Preecnha os Campos!')
             }
-        } 
-    }       
-}
+
+*/
