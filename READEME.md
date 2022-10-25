@@ -1,4 +1,5 @@
-<h1>Calculadora de Compra e Venda de Milhas v1.0</h1>
+<h1>Calculadora de Compra e Venda de Milhas v2.0</h1>
+V1.0 Lançada - Data Atualizacao: 14-10-22
 
 <p>Calculadora Criada no intuito de facilitar o dia a dia na compra e venda de milha.</p>
 <h2>Como Utilizar:</h2>
@@ -18,5 +19,11 @@
 Link do Projeto Hospedado -> 
 https://wesleytteles.github.io/calculadora-milhas/
 
-<img src="/assets/img/calculadora.png">
-Data Atualizacao: 14-10-22
+
+V2.0 Lançada - Data Atualizacao: 25-10-22
+<h2>Novo Layout:</h2>
+<p>
+- Mais Dinâmico <br>
+- Com Menu para Compra, Venda e Transferencia<br>
+- Mais Atranete <br>
+</p>

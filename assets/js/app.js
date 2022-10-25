@@ -16,19 +16,14 @@ function checkBuyPoint(){
     }
     return true;
 }
-// Funcao para Limpar os Campos apos o calculo.
-function remov() {
-    document.querySelector('#qtd-point').value = '';
-    document.querySelector('#vl-cupon').value = '';
-    document.querySelector('#vl-transfer').value = '';
-}
 
 // Funcao pra quando clica no checkbox ele mostre o input da transferencia
 let checkbox = document.querySelector('#check');
 let element = document.querySelector('.row-transfer');
 
 checkbox.addEventListener('change', ()=> {
-    let list = element.classList.toggle("show-input-transfer");
+    element.classList.toggle("show-input-transfer");
+    document.querySelector('#vl-transfer').value = '';
 })
 
 // funcao para monitorar as mudancas do select e armazenar em uma variavel
@@ -51,72 +46,71 @@ function calcPoints() {
     resultTransfer = ((qtdPointNumb * vlTransferNumb) / 100) + qtdPointNumb;
     priceMilheiroOff = valueInvest / (resultTransfer / 1000);
     
-    if(checkBuyPoint() == false){}
-    else 
-    {
+    if(checkBuyPoint() == false){
+
+    } else {
         if(vlTransfer == ''){
             document.querySelector('#vl-invest').innerHTML = valueInvest.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             document.querySelector('#vl-milheiro').innerHTML = priceMilhasReal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             if (valor == 1){
                 if (priceMilhasReal <= 17.50) {
-                    document.querySelector('#warning').innerHTML = 'OPORTUNIDADE NESSA CONTACAO'
+                    document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
                     document.querySelector('#warning').style.color = '#21EC1D';
                 } else {
-                    document.querySelector('#warning').innerHTML = 'PREJUIZO NESSA CONTACAO'  
-                    document.querySelector('#warning').style.color = 'red';
+                    document.querySelector('#warning').innerHTML = 'Cotação boa Somente pra Viagem'  
+                    document.querySelector('#warning').style.color = '#ffff00';
                 }
             } else if (valor == 2) {
                 if (priceMilhasReal <= 20) {
-                    document.querySelector('#warning').innerHTML = 'OPORTUNIDADE NESSA CONTACAO'
+                    document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
                     document.querySelector('#warning').style.color = '#21EC1D';
                 } else {
-                    document.querySelector('#warning').innerHTML = 'PREJUIZO NESSA CONTACAO'  
-                    document.querySelector('#warning').style.color = 'red';
+                    document.querySelector('#warning').innerHTML = 'Cotação boa Somente pra Viagem'  
+                    document.querySelector('#warning').style.color = '#ffff00';
                 }
             } else if (valor == 3 || valor == 4) {
                 if (priceMilhasReal <= 24) {
-                    document.querySelector('#warning').innerHTML = 'OPORTUNIDADE NESSA CONTACAO'
+                    document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
                     document.querySelector('#warning').style.color = '#21EC1D';
                 } else {
-                    document.querySelector('#warning').innerHTML = 'PREJUIZO NESSA CONTACAO'  
-                    document.querySelector('#warning').style.color = 'red';
+                    document.querySelector('#warning').innerHTML = 'Cotação boa Somente pra Viagem'  
+                    document.querySelector('#warning').style.color = '#ffff00';
                 }
             } else {
                 alert('Preecnha os Campos!')
             }
-            //remov();    
+
         } else {
             document.querySelector('#vl-invest').innerHTML = valueInvest.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             document.querySelector('#vl-milheiro').innerHTML = priceMilheiroOff.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             document.querySelector('#ttl-point').innerHTML = resultTransfer;   
             if (valor == 1){
                 if (priceMilheiroOff <= 17.50) {
-                    document.querySelector('#warning').innerHTML = 'OPORTUNIDADE NESSA CONTACAO'
+                    document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
                     document.querySelector('#warning').style.color = '#21EC1D';
                 } else {
-                    document.querySelector('#warning').innerHTML = 'PREJUIZO NESSA CONTACAO'  
-                    document.querySelector('#warning').style.color = 'red';
+                    document.querySelector('#warning').innerHTML = 'Cotação boa Somente pra Viagem'  
+                    document.querySelector('#warning').style.color = '#ffff00';
                 }
             } else if (valor == 2) {
                 if (priceMilheiroOff <= 20) {
-                    document.querySelector('#warning').innerHTML = 'OPORTUNIDADE NESSA CONTACAO'
+                    document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
                     document.querySelector('#warning').style.color = '#21EC1D';
                 } else {
-                    document.querySelector('#warning').innerHTML = 'PREJUIZO NESSA CONTACAO'  
-                    document.querySelector('#warning').style.color = 'red';
+                    document.querySelector('#warning').innerHTML = 'Cotação boa Somente pra Viagem'  
+                    document.querySelector('#warning').style.color = '#ffff00';
                 }
             } else if (valor == 3 || valor == 4) {
                 if (priceMilheiroOff <= 24) {
-                    document.querySelector('#warning').innerHTML = 'OPORTUNIDADE NESSA CONTACAO'
+                    document.querySelector('#warning').innerHTML = 'Cotação boa pra Venda ou Viagem'
                     document.querySelector('#warning').style.color = '#21EC1D';
                 } else {
-                    document.querySelector('#warning').innerHTML = 'PREJUIZO NESSA CONTACAO'  
-                    document.querySelector('#warning').style.color = 'red';
+                    document.querySelector('#warning').innerHTML = 'Cotação boa Somente pra Viagem'  
+                    document.querySelector('#warning').style.color = '#ffff00';
                 }
             } else {
                 alert('Preecnha os Campos!')
             }
-            //remov();    
         } 
     }       
 }
