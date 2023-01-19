@@ -8,10 +8,8 @@ main {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-image: url("/assets/img/ft.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(33,33,213,1) 100%);
 }
 .container {
     display: flex;
@@ -20,7 +18,7 @@ main {
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-    height: inherit;
+    height: 50%;
     margin: 0;
     padding: 0;
 }
@@ -29,8 +27,8 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex: 1;
     width: 100%;
+    height: 85%;
     border-radius: 10px 10px 0 0 ;
     background: linear-gradient(0deg, rgba(108, 143, 183, 0.76), rgba(108, 143, 183, 0.76)),
     linear-gradient(245.82deg, #2DBCCA 39.12%, rgba(45, 188, 202, 0) 72.04%), #4B68BC;
@@ -55,8 +53,9 @@ main {
     flex-direction: column;
     border-radius: 10px;
     width: 85%;
-    height: 170px;
-    margin: 8px;
+    height: auto;
+    margin: 8px 0;
+    padding: 10px 0;
     background-color: #000;
     
 }
@@ -112,7 +111,6 @@ main {
     width: 100%;
     background-color: #000;
     color: #fff;
-    border-radius: 0 0 10px 10px ;
     margin: 0;
     padding: 0;
 }
@@ -179,7 +177,6 @@ option{
     font-size: 0.9rem;
     color: #4B68BC;
 }
-
 .row-checkbox{
     display: flex;
     align-items: center;
@@ -194,7 +191,7 @@ option{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin: 25px 0;
 }
 .row-btn button {
     border-radius: 10px;
@@ -213,8 +210,6 @@ nav {
     max-width: 400px;
     background: linear-gradient(0deg, rgba(108, 143, 183, 0.76), rgba(108, 143, 183, 0.76)),
     linear-gradient(245.82deg, #2DBCCA 39.12%, rgba(45, 188, 202, 0) 72.04%), #4B68BC;
-    position: fixed;
-    bottom: 0;
     border-radius: 0 0 10px 10px ;
 }
 nav a {
