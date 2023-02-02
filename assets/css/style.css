@@ -8,8 +8,7 @@ main {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(33,33,213,1) 100%);
+    background-color: #C5E4E7;
 }
 .container {
     display: flex;
@@ -42,9 +41,9 @@ main {
 }
 .col-container-1 h2 {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
-    padding: 0;
+    margin-top: 10px;
 }
 .row-info-box {
     display: flex;
@@ -206,7 +205,7 @@ option{
 /* >>>>>>>>>>>>>>> MENU FIXO <<<<<<<<<<<<< */
 nav {
     width: 100%;
-    height: 40px;
+    height: auto;
     max-width: 400px;
     background: linear-gradient(0deg, rgba(108, 143, 183, 0.76), rgba(108, 143, 183, 0.76)),
     linear-gradient(245.82deg, #2DBCCA 39.12%, rgba(45, 188, 202, 0) 72.04%), #4B68BC;
@@ -221,8 +220,19 @@ ul {
     justify-content: space-around;
 }
 ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     margin: 10px 0;
+}
+li span{
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 5px;
 }
 i {
     cursor: pointer;

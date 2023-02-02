@@ -16,19 +16,19 @@
         <div class="container">
             <div class="col-container-1">
                 <h1>Realize sua Cotacao</h1>
-                <h2>Compra de Pontos ou Milhas</h2>
+                <h2>Pontos + Dinhiero</h2>
                 <div class="row-info-box">
                     <div class="row-value-invest">
-                        <h3 id="vl-invest">R$ 00,00</h3>
-                        <span>Valor Investido</span>
+                        <h3 id="vl-milheiro">R$ 00,00</h3>
+                        <span>Valor Milheiro</span>
                     </div>
                     <div class="row-value-milheiro">
-                        <span>Valor do Milheiro</span>
-                        <span id="vl-milheiro">R$ 00,00</span>
+                        <span>Valor do Investido</span>
+                        <span id="vl-invest">R$ 00,00</span>
                     </div>
                     <div class="row-qtd-points">
-                        <span>Pts Pós Transferência</span>
-                        <span id="ttl-point">Pt 0</span>
+                        <span>Total de Pts Acumulados</span>
+                        <span id="ttl-point">Pts 0</span>
                     </div>
                 </div>
                 <!-- <div class="warning">
@@ -40,18 +40,28 @@
 
                     <div class="input-group">
                         <div class="info-input">
-                            <span>Qtd de Pontos/Milhas</span>
+                            <span>Qtd de Pts para Tranferir</span>
                             <i class="fa-solid fa-circle-info fa-2xs" title="Digite a Quantidade de pontos ou milhas podendo ser pontos acumulado ou compra de pontos para Tranferencia ou apenas compra de milhas."></i>
                         </div>
                         <input id="qtd-point" type="text" placeholder="Digite Aqui">
                     </div>
+
                     <div class="input-group">
                         <div class="info-input">
-                            <span>Valor do Cupom ( % )</span>
+                            <span>20% dos Seus Pontos</span>
                             <i class="fa-solid fa-circle-info fa-2xs" title="Digite somente o número da Porcentagem de desconto que voce recebeu para comprar dos pontos ou milhas."></i>
                         </div>
-                        <input id="vl-cupon" type="text" maxlength="3" placeholder="Digite Aqui">
+                        <input id="qtd-percent" type="text" placeholder="Digite Aqui">
                     </div>
+
+                    <div class="input-group">
+                        <div class="info-input">
+                            <span>Valor Investido</span>
+                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite somente o número da Porcentagem de desconto que voce recebeu para comprar dos pontos ou milhas."></i>
+                        </div>
+                        <input id="vlr-invest" type="text" placeholder="Digite Aqui">
+                    </div>
+
                     <div class="row-transfer input-group">
                         <div class="info-input">
                             <span>Valor da Transferencia ( % )</span>
@@ -91,5 +101,5 @@
         </div>
     </main>
 </body>
-<script src="assets/js/app.js"></script>
+<script src="/assets/js/transfer.js"></script>
 </html>
