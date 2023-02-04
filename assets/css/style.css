@@ -33,17 +33,15 @@ main {
     linear-gradient(245.82deg, #2DBCCA 39.12%, rgba(45, 188, 202, 0) 72.04%), #4B68BC;
 }
 .col-container-1 h1 {
-    color: #fff;
-    font-size: 1.4rem;
+    color: #fffFFF;
+    font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
-    padding: 0;
-    margin-top: 8px;   
+    margin: 10px 0;   
 }
 .col-container-1 h2 {
-    color: #fff;
-    font-size: 1.3rem;
+    color: #ffffff;
+    font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
 }
 .row-info-box {
     display: flex;
@@ -53,10 +51,13 @@ main {
     border-radius: 10px;
     width: 85%;
     height: auto;
-    margin: 8px 0;
+    margin: 10px 0;
     padding: 10px 0;
-    background-color: #000;
-    
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2.8px);
+    -webkit-backdrop-filter: blur(2.8px);
 }
 .row-value-invest {
     display: flex;
@@ -70,12 +71,12 @@ main {
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     font-weight:300;
-    color: #fff;
+    color: #ffffff;
 }
 .row-value-invest span {
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
-    color: #A3A8AF;
+    color: #ffffff;
 }
 .row-value-milheiro,
 .row-qtd-points {
@@ -88,16 +89,9 @@ main {
 .row-value-milheiro span,
 .row-qtd-points span {
     font-family: 'Roboto', sans-serif;
-    color: #A3A8AF;
-    margin: 0 20px;
-}
-.warning {
-    text-align: center;
-    height: 15px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    color: #ff0000;
+    color: #ffffff;
+    margin: 0 13px;
+    font-size: 0.9rem;
 }
 
 /* >>>>>>>>>>>>>>>>> PARTE DE DOS INPUTS <<<<<<<<<<<<<<< */
@@ -108,8 +102,8 @@ main {
     align-items: center;
     flex: 2;
     width: 100%;
-    background-color: #000;
-    color: #fff;
+    background-color: #F9FBFC;
+    color: #6D6D6D;
     margin: 0;
     padding: 0;
 }
@@ -119,7 +113,7 @@ main {
     flex-direction: column;
     height: auto;
     width: 100%;
-    max-width: 85%;
+    max-width: 88%;
     margin: 0;
     padding: 0;
 }
@@ -145,18 +139,21 @@ main {
     background: none;
     padding-left: 5px;
     border-radius: 5px;
-    color: #fff;
+    color: #000;
 }
 ::placeholder{
     text-align: center;
     font-size: 0.7rem;
     font-style: italic;
+    
 }
 .info-input{
     display: flex;
 }
 .info-input span {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    font-size: 0.9rem;
 }
 .row-select{
     display: flex;
@@ -200,40 +197,44 @@ option{
     font-size: 1.3rem;
     font-weight: 400;
     color: #4B68BC;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 15px ;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2.8px);
+    -webkit-backdrop-filter: blur(2.8px);
+    border: solid #4B68BC;
 }
-
 /* >>>>>>>>>>>>>>> MENU FIXO <<<<<<<<<<<<< */
 nav {
     width: 100%;
-    height: auto;
     max-width: 400px;
     background: linear-gradient(0deg, rgba(108, 143, 183, 0.76), rgba(108, 143, 183, 0.76)),
     linear-gradient(245.82deg, #2DBCCA 39.12%, rgba(45, 188, 202, 0) 72.04%), #4B68BC;
     border-radius: 0 0 10px 10px ;
 }
-nav a {
+ul a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: #fff;
 }
 ul {
     display: flex;
+    align-items: center;
     justify-content: space-around;
+    height: 70px;
 }
 ul li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 5px;
     list-style: none;
-    margin: 10px 0;
 }
-li span{
+a span{
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
     font-size: 0.8rem;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 15px;
 }
-i {
-    cursor: pointer;
-}
+

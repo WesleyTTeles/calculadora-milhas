@@ -1,7 +1,7 @@
 // Funcao pra checar se os campos estao vazios
 function checkField(){
     let qtdPoints = document.querySelector('#qtd-point').value;
-    let porcentPoint = document.querySelector('#vl-cupon').value;
+    let porcentPoint = document.querySelector('#qtd-percent').value;
     let msg1 = '';
 
     if (qtdPoints == ''){
@@ -23,39 +23,59 @@ document.querySelector('#check').addEventListener('change', ()=> {
     document.querySelector('#vl-transfer').value = '';
 })
 
-// Funcao para limpar os campos
+// funcao para limpar os Campos
 function clearFields() {
-    const fields = ['#qtd-point', '#vl-cupon', '#vl-transfer'];
+    const fields = ['#qtd-point', '#qtd-percent', '#vlr-invest', '#vl-transfer', '#vlr-milheiro'];
     fields.forEach(field => {
       document.querySelector(field).value = '';
     });
 }
 
-document.querySelector('#btn-cotar').addEventListener('click', ()=> {
+// Calculando os 20%
+let qtdPoint = document.querySelector('#qtd-point');
+let qtdPercent = document.querySelector('#qtd-percent');
 
+qtdPoint.addEventListener("change", function(){
+    qtdPercent.value = this.value * 0.2;
+});
+
+// Funcao para realizar todo o calculo
+document.querySelector('#btn-cotar').addEventListener('click', () => {
     let qtdPointNumb = parseFloat(document.querySelector('#qtd-point').value);
-    let vlCupomNumb = parseFloat(document.querySelector('#vl-cupon').value);
+    let vlrPercentNumb = parseFloat(document.querySelector('#qtd-percent').value);
     let vlTransferNumb = document.querySelector('#vl-transfer').value;
+    let vlrInvesNumb = parseFloat(document.querySelector('#vlr-invest').value);
+    let vlrMilheiroNumb = parseFloat(document.querySelector('#vlr-milheiro').value);
 
-    priceMilhasReal = 70 - ((70 * vlCupomNumb) / 100);
-    valueInvest = (qtdPointNumb / 1000) * priceMilhasReal;
+    pointRestante = qtdPointNumb - vlrPercentNumb;
+
+    vlrPontRestante = ( vlrPercentNumb * vlrMilheiroNumb) / 1000;
+    
+
+    priceMilhasReal = ( vlrInvesNumb * 1000 ) / pointRestante ;
+    valueInvest = vlrInvesNumb + vlrPontRestante;
     
     resultTransfer = ((qtdPointNumb * vlTransferNumb) / 100) + qtdPointNumb;
     priceMilheiroOff = valueInvest / (resultTransfer / 1000);
     
     if(checkField() == false){
     } else {
-        if(vlTransferNumb == '') {
+        if (vlTransferNumb === '') {
             document.querySelector('#vl-invest').innerHTML = valueInvest.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             document.querySelector('#vl-milheiro').innerHTML = priceMilhasReal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            document.querySelector('#milheiro-restant').innerHTML = priceMilhasReal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            document.querySelector('#points-restant').innerHTML = pointRestante;
+            document.querySelector('#ttl-point').innerHTML = qtdPointNumb;
             clearFields()
         } else {
             document.querySelector('#vl-invest').innerHTML = valueInvest.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             document.querySelector('#vl-milheiro').innerHTML = priceMilheiroOff.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            document.querySelector('#milheiro-restant').innerHTML = priceMilhasReal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            document.querySelector('#points-restant').innerHTML = pointRestante;
             document.querySelector('#ttl-point').innerHTML = resultTransfer;   
-            clearFields()
-        } 
-    }           
+            clearFields()    
+            } 
+        }       
 });
 
 document.querySelector('#warnig').addEventListener('click', ()=> {

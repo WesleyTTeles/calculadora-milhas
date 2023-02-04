@@ -16,56 +16,34 @@
         <div class="container">
             <div class="col-container-1">
                 <h1>Realize sua Cotacao</h1>
-                <h2>Pontos + Dinhiero</h2>
+                <h2>Calculadora de Milheiro</h2>
                 <div class="row-info-box">
                     <div class="row-value-invest">
                         <h3 id="vl-milheiro">R$ 00,00</h3>
-                        <span>Valor Milheiro</span>
-                    </div>
-                    <div class="row-value-milheiro">
-                        <span>Valor do Investido</span>
-                        <span id="vl-invest">R$ 00,00</span>
-                    </div>
-                    <div class="row-qtd-points">
-                        <span>Total de Pts Acumulados</span>
-                        <span id="ttl-point">Pts 0</span>
+                        <span>Valor do Milheiro</span>
                     </div>
                 </div>
-                <!-- <div class="warning">
+                <div class="warning">
                     <span id="warning"></span>
-                </div> -->
+                </div>
             </div>
             <div class="col-container-2">
                 <div class="row-info-inputs">
-
                     <div class="input-group">
                         <div class="info-input">
-                            <span>Qtd de Pts para Tranferir</span>
-                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite a Quantidade de pontos ou milhas podendo ser pontos acumulado ou compra de pontos para Tranferencia ou apenas compra de milhas."></i>
+                            <span>Qtd de Pontos/Milhas</span>
                         </div>
-                        <input id="qtd-point" type="text" placeholder="Digite Aqui">
+                        <input id="qtd-milhas" type="text" placeholder="Digite Aqui">
                     </div>
-
-                    <div class="input-group">
-                        <div class="info-input">
-                            <span>20% dos Seus Pontos</span>
-                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite somente o número da Porcentagem de desconto que voce recebeu para comprar dos pontos ou milhas."></i>
-                        </div>
-                        <input id="qtd-percent" type="text" placeholder="Digite Aqui">
-                    </div>
-
                     <div class="input-group">
                         <div class="info-input">
                             <span>Valor Investido</span>
-                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite somente o número da Porcentagem de desconto que voce recebeu para comprar dos pontos ou milhas."></i>
                         </div>
-                        <input id="vlr-invest" type="text" placeholder="Digite Aqui">
+                        <input id="vl-simulation" type="text" placeholder="Digite Aqui">
                     </div>
-
                     <div class="row-transfer input-group">
                         <div class="info-input">
                             <span>Valor da Transferencia ( % )</span>
-                            <i class="fa-solid fa-circle-info fa-2xs" title="Digite somente o número da Porcentagem da Tranferencia."></i>
                         </div>
                         <input id="vl-transfer" type="text" maxlength="3" placeholder="Digite Aqui">
                     </div>
@@ -83,23 +61,31 @@
                     <li>
                         <a href="/index.html">
                             <i class="fa-solid fa-bag-shopping fa-lg"></i>
+                            <span>Compra de Pontos</span>
                         </a>
-                        <span>Compra de Pontos</span>
+                    </li>
                     <li>
-                        <a href="sell.html">
-                            <i class="fa-solid fa-dollar-sign fa-lg"></i>
-                        </a>
-                        <span>Valor Milheiro</span>
-                    <li>
-                        <a href="pts+money.html">
+                        <a href="index_2.html">
                             <i class="fa-solid fa-right-left fa-lg"></i>
+                            <span>Pontos + Dinheiro</span>
                         </a>
-                        <span>Pontos + Dinheiro</span>
+                    </li>
+                    <li>
+                        <a href="index_3.html">
+                            <i class="fa-solid fa-dollar-sign fa-lg"></i>
+                            <span>Valor Milheiro</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="warnig">
+                            <i class="fa-solid fa-circle-info fa-lg"></i>
+                            <span>Ajuda</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </main>
 </body>
-<script src="/assets/js/transfer.js"></script>
+<script src="/assets/js/app_1.js"></script>
 </html>
