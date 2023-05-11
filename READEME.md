@@ -17,7 +17,7 @@ V1.0 Lançada - Data Atualizacao: 14-10-22
 </p>
 
 Link do Projeto Hospedado -> 
-https://wesleytteles.github.io/calculadora-milhas/
+https://milhassimples.netlify.app/
 
 
 V2.0 Lançada - Data Atualizacao: 25-10-22
